@@ -9,10 +9,10 @@
 
         <div class="row">
             <div class="col">
-                <button><a href="{{ url('/home') }}">Go Back to the homepage</a></button>
+                <button><a href="{{ url('/input') }}">Go Back to the homepage</a></button>
             </div>
             <div class="col">
-                <button><a href="{{ url('/home') }}">Go Back to the previous page</a></button>
+                <button><a href="{{ url()->previous() }}">Go Back to the previous page</a></button>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-8">    
                 <label>Try Searching for your page here:</label>
-                <input></input>
+                <input placeholder="Search..."></input>
                 <button>Go</button>
             </div>
             <div class="col-md-2">

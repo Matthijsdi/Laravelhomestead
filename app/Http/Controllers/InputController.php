@@ -15,6 +15,7 @@ class InputController extends Controller
      */
     public function index()
     {
+		//App::abort(500);
         $input = Input::all();
         return view('input.index', compact('input'));
     }
@@ -26,7 +27,7 @@ class InputController extends Controller
      */
     public function create()
     {
-        return view('input.create');
+		return view('input.create');
     }
 
     /**
@@ -37,12 +38,9 @@ class InputController extends Controller
      */
     public function store(InputRequest $request)
     {
-
         $request->validated();
         input::query()->create($request->all());
         return redirect('/input');
-
-
     }
 
     /**
